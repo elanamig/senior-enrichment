@@ -1,0 +1,315 @@
+/* general properties */
+* {
+    box-sizing: border-box;
+}
+
+span {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding-top: 3em;
+}
+
+body {
+    background-color: rgb(235, 235, 247)
+}
+
+p {
+    padding-top: 2em;
+}
+/* Control the display of the header section */
+.header {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    flex-direction: column;
+    height: 10em;
+    color: white;
+    font-weight: 400;
+    white-space: nowrap;
+    font-family: 'Arizonia', Helvetica, sans-serif;
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+    background-image: linear-gradient(to right bottom, rgb(27, 27, 59), rgb(144, 146, 235));
+}
+
+.headerSub {
+    font-size: 2em;
+}
+.headerMain {
+    font-size: 3em;
+}
+.header:hover {
+    color:white;
+}
+
+/* overriding some default bootstrap values for tabs and links */
+.nav-container {
+    background-color: rgb(27, 27, 63);
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    background-color:  rgb(235, 235, 247);
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    color: white;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+
+a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* containers for lists and list items */
+
+.listContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.listItem {
+    background-clip: content-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width: calc(100%/3);
+    padding: 50px;
+    background-color: white;
+    border-radius: 75px;
+    color: black;
+}
+
+.leftPadding {
+    padding-left: 2em;
+}
+
+img {
+    display: flex;
+    max-width:150px;
+    max-height:150px;
+    width: 50%;
+    height: auto;
+    margin-bottom: 2em;
+    margin-top: 1em;
+}
+
+.listItem-header {
+    display:flex;
+    padding-top: 1em;
+    width: 100%;
+    justify-content: space-around
+}
+
+.listItem-delete {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+button.listItem-delete {
+    width: 15%; 
+    padding-left: 7%;
+}
+
+.listItem-name {
+    width: 70%;
+    margin-left: 0;
+    justify-content: center;
+    /*padding-left: 4em;*/
+}
+
+listItem-edit{
+    padding:0;
+    margin:0;
+    border:0;
+    padding-right:2em;
+}
+
+button.listItem-edit {
+    border:0;
+    width: 15%;
+}
+
+
+.listItem-name-add {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+img.listItem-image {
+    justify-content: center;
+    width: 100%;
+}
+.padBottom {
+    padding-bottom: 2em;
+}
+
+/*Styles for the add page*/
+.addModule {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+    border-radius: 75px;
+}
+
+.addModule-inner {
+    display: flex;
+    padding: 1em;
+    border: 0;
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+}
+
+.addModule-label {
+    padding: 1em;
+    width: 30%;
+    text-align: right;
+}
+
+.addModule-input {
+    padding: 1em;
+    width: 70%;
+    text-align: left;
+}
+
+.addModule-rightPadding {
+    padding-right: 3em;
+}
+
+.addModule-button {
+    margin: 2em;
+}
+
+/*styles for student pages */
+.student-delete-img {
+    margin: 0;
+    width: 1em;
+    
+}
+
+.student-delete-col {
+    display: flex;
+    flex-direction: row;
+    width: 2em;
+}
+
+.student-delete-button{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    border: 0;
+}
+
+.tableModule {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    width: 80%;
+    border-radius: 75px;
+    padding: 2em;
+}
+
+.tableModule-add {
+    width: 30%;
+    align-self: center;
+}
+
+/*single campus display */
+.mainCampus {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    background-color: white;
+    justify-content: space-around;
+    text-align: center;
+    border-radius: 75px;
+    padding: 2em;
+}
+
+.mainCampus-imgdesc {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+    padding-left:7em;
+}
+
+.mainCampus-del{
+    height: 100%;
+    padding: 0;
+    border:0;
+    margin: 0;
+}
+
+.mainCampus-imgdesc img {
+    max-height: 25px;
+    max-width: 25px;
+    vertical-align: text-top;
+    margin-top: 0;
+    margin-right: 2em;
+}
+/* welcome container properties */
+.welcome-container {
+    padding-left: 5em;
+    padding-right: 5em;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 2em;
+}
+
+
+
+
+/* dynamic recising */
+
+@media only screen and (max-width: 850px) {
+    .headerMain {
+        font-size: 2.5em;
+    }
+    .listItem {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .headerMain {
+        font-size: 2em;
+    }
+    .headerSub {
+        font-size: 1.5em;
+    }
+
+    .listItem {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .headerMain {
+        font-size: 1.5em;
+    }
+    .headerSub {
+        font-size: 1.2em;
+    }
+    .listItem {
+        width: 100%;
+    }
+}
