@@ -31,9 +31,17 @@ function getCampus (campus) {
     return {type: GET_CURRENT_CAMPUS, campus};
 }
 
-export function resetCampus () {
+export function resetCampus (history, campusId) {
     return (dispatch) => {
         dispatch (clearCampus());
+        if (history) {
+            if (campusId) {
+                history.push(`/campuses/${campusId}`)
+            } else {
+                history.push(`/campuses`);
+            }
+        }
+        
     };
 }
 

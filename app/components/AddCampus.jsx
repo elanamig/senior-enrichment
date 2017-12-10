@@ -85,18 +85,25 @@ const mapDispatchToProps = function (dispatch, props) {
             } else {
                 dispatch (postCampus (campusName, campusImgUrl, campusDesc, props.history));
             }
-            dispatch (resetCampus ());
+            dispatch (resetCampus (props.history));
         },
         handleReset: (event) => {
             event.preventDefault();
-           // console.log('resetting in AddCampus');
-            dispatch (resetCampus ());
-            props.history.push('/campuses/add')
+            //console.log('resetting in AddCampus');
+           
+            //dispatch (resetCampus (props.history, 'add'));
+            dispatch(resetCampus ());
+           // props.history.push('/campuses/add')
         },
         handleCancel: (event) => {
             event.preventDefault();
-            dispatch (resetCampus());
-            props.history.push('/campuses')
+            
+            console.log('===============================>',props.match.params);
+            if (props.match.params && props.match.params.campusId)
+                dispatch (resetCampus(props.history, props.match.params.campusId));
+            else {
+                dispatch (resetCampus(props.history));
+            }
         },
         getCampus: (campusId) => {
             dispatch(retrieveCampus(campusId));

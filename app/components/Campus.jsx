@@ -26,9 +26,9 @@ class Campus extends Component {
                             <NavLink className='leftPadding' to={`/campuses/edit/${this.props.campus.id}`}>
                                 <img className='listItem-delete' id={this.props.campus.id} src='/img/edit.ico' />
                             </NavLink>
-                            <button id={this.props.campus.id} className=' mainCampus-del' onClick={this.props.deleteCampus}>
-                            <img id={this.props.campus.id} className='mainCampus-del' src='/img/del.png' />
-                        </button> 
+                         {/*  } <button id={this.props.campus.id} className=' mainCampus-del' onClick={this.props.deleteCampus}>
+            <img id={this.props.campus.id} className='mainCampus-del' src='/img/del.png' />
+            </button> */}
                         </div>
                         <span>{this.props.campus.description}</span>  
                     </div>

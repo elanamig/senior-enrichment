@@ -7,7 +7,7 @@ import { deleteCampus, editCampus, fetchCampuses, resetCampus } from '../store';
 class CampusList extends Component {
     componentDidMount() {
         this.props.loadCampuses();
-        this.props.resetCampus();
+        this.props.resetCampus(this.props.history);
     } 
     
     render () {
@@ -79,7 +79,7 @@ const mapDispatchToProps = function (dispatch, props) {
         loadCampuses: () => {
             dispatch(fetchCampuses());
         },
-        resetCampus: () => dispatch(resetCampus())
+        resetCampus: () => dispatch(resetCampus(props.history))
 
     }
 }
